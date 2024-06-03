@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="rootPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myproject.shooter2d.TitleScreenController">
+    <ImageView fitHeight="500.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../image/background_game_over.png" />
+        </image>
+    </ImageView>
+   <BorderPane prefHeight="500.0" prefWidth="900.0">
+      <center>
+         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+               <Insets bottom="100.0" left="250.0" right="250.0" top="100.0" />
+            </BorderPane.margin>
+            <children>
+               <Text fill="#b9a814" strokeType="OUTSIDE" strokeWidth="0.0" text="Shooter2d">
+                  <font>
+                     <Font name="System Bold" size="44.0" />
+                  </font></Text>
+               <Button mnemonicParsing="false" onAction="#play" style="-fx-background-color: darkKhaki; -fx-border-color: gold; -fx-border-width: 2;" text="Play">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+      </center>
+   </BorderPane>
+</Pane>

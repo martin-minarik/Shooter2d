@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="rootPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myproject.shooter2d.GameOverController">
+    <ImageView fitHeight="500.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../image/background_game_over.png" />
+        </image>
+    </ImageView>
+   <BorderPane prefHeight="500.0" prefWidth="900.0">
+      <center>
+         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: darkKhaki; -fx-border-width: 5;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+               <Insets bottom="100.0" left="250.0" right="250.0" top="100.0" />
+            </BorderPane.margin>
+            <children>
+               <Label text="Game Over" textFill="#b9a814" VBox.vgrow="ALWAYS">
+                  <font>
+                     <Font name="Impact" size="48.0" />
+                  </font>
+               </Label>
+               <HBox prefHeight="34.0" prefWidth="293.0">
+                  <children>
+                     <Label text="Score:" textFill="#b9a814">
+                        <font>
+                           <Font name="Impact" size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets />
+                        </HBox.margin>
+                     </Label>
+                     <Label fx:id="scoreLabel" text="0" textFill="#b9a814">
+                        <font>
+                           <Font name="Impact" size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="5.0" />
+                  </VBox.margin>
+               </HBox>
+               <HBox prefHeight="34.0" prefWidth="293.0">
+                  <children>
+                     <Label text="Highest score:" textFill="#b9a814">
+                        <font>
+                           <Font name="Impact" size="24.0" />
+                        </font>
+                     </Label>
+                     <Label fx:id="highestScoreLabel" text="0" textFill="#b9a814">
+                        <font>
+                           <Font name="Impact" size="24.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="5.0" />
+                  </VBox.margin>
+               </HBox>
+               <Button mnemonicParsing="false" onAction="#playAgainPressed" style="-fx-background-color: darkKhaki; -fx-border-color: gold; -fx-border-width: 2;" text="Play Again ">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </Button>
+            </children>
+         </VBox>
+      </center>
+   </BorderPane>
+</Pane>
